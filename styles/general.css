@@ -1,0 +1,24 @@
+:root {
+  --light-gray: rgb(116, 116, 116);
+  --dark-gray: rgb(65, 65, 65);
+  --light-orange: rgb(248, 211, 46);
+  --medium-orange: rgb(255, 187, 0);
+  --dark-orange: rgb(255, 147, 7);
+  --gray-gradient: linear-gradient(var(--light-gray), var(--dark-gray));
+  --orange-gradient: linear-gradient(var(--light-orange), var(--dark-orange));
+}
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  position: relative;
+  background-image: var(--gray-gradient);
+  background-attachment: fixed;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  opacity: 1;
+}

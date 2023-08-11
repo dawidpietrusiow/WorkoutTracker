@@ -1,0 +1,168 @@
+#setup-page .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  gap: 180px;
+  overflow-x: hidden;
+  text-align: center;
+  padding: 100px 0;
+}
+#setup-page header{
+  font-size: 80px;
+  background-image: var(--orange-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+#date-input-section {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+#date-input-section div{
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+#date-input-section div label {
+  position: static;
+  font-size: 20px;
+}
+#exercise-input-list .exercise .name,
+#exercise-input-list .exercise .goal,
+#date-input-section input,
+#date-input-section select, 
+#date-input-section select option{
+  font-size: 20px;
+  border: 2px solid var(--medium-orange);
+  border-radius: 8px;
+  outline: none;
+  color: black;
+}
+#date-input-section input,
+#date-input-section select {
+  width: 180px;
+  height: 40px;
+  text-align: center;
+  cursor: pointer;
+}
+#setup-page label {
+  position: absolute;
+  top: -70px;
+  font-size: 40px;
+  background-image: var(--orange-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+#exercise-input-section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  gap: 20px;
+}
+#exercise-count {
+  width: 60px;
+  height: 30px;
+  font-size: 20px;
+  text-align: center;
+  border: 2px solid var(--medium-orange);
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+}
+#exercise-count-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+#exercise-count-label {
+  position: static !important;
+  font-size: 22px !important;
+}
+#exercise-input-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 25px;
+  margin-bottom: 50px;
+}
+#exercise-input-list .exercise {
+  display: grid;
+  grid-template-columns: 300px 80px;
+  height: 80px;
+  gap: 30px;
+}
+#exercise-input-list .exercise .name-container,
+#exercise-input-list .exercise .goal-container {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+}
+#exercise-input-list .exercise .name-label, 
+#exercise-input-list .exercise .goal-label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  position: static;
+  font-size: 20px;
+}
+#exercise-input-list .exercise .name-label span {
+  font-size: 12px;
+}
+#exercise-input-list .exercise .name {
+  padding-left: 15px;
+  height: 100%;
+  width: 100%;
+  max-height: 50px;
+  cursor: text;
+}
+#exercise-input-list .exercise .goal {
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  max-height: 50px;
+  cursor: pointer;
+}
+#generate-plan-btn {
+  width: 250px;
+  height: 60px;
+  color: var(--medium-orange);
+  font-size: 30px;
+  background-color: var(--dark-gray);
+  padding: 10px 20px;
+  border: 3px solid var(--medium-orange);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 100ms;
+}
+#generate-plan-btn:hover {
+  box-shadow: 0 0 15px var(--medium-orange);
+}
+#generate-plan-btn:active {
+  background-color: var(--light-gray);
+}
+
+@media(max-width: 700px) {
+  #setup-page label {
+    font-size: 32px;
+    white-space: nowrap;
+  }
+  #date-input-section {
+    flex-direction: column;
+  }
+  #exercise-input-list .exercise {
+    display: grid;
+    grid-template-columns: 200px 80px;
+    height: 60px;
+    gap: 10px;
+  }
+}

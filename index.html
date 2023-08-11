@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="styles/setup-page.css">
+    <link rel="stylesheet" href="styles/menu.css">
+    <link rel="stylesheet" href="styles/exercises.css">
+  </head>
+  <body>
+    <div id="setup-page">
+      <div class="container">
+        <header>Workout Tracker</header>
+        <div id="date-input-section">
+          <label>Date and Interval Input</label>
+          <div>
+            <label>Start Date</label>
+            <input type="date" id="start-date">
+          </div>
+          <div>
+            <label>End Date</label>
+            <input type="date" id="end-date">
+          </div>
+          <div>
+            <label>Interval</label>
+            <select id="interval">
+              <option value="1" selected>Everyday</option>
+              <option value="2">Every other day</option>
+              <option value="7">Once a week</option>
+            </select>
+          </div>
+        </div>
+        <div id="exercise-input-section">
+          <label>Exercise Input</label>
+          <div id="exercise-count-section">
+            <label id="exercise-count-label">Exercise Count</label>
+            <select id="exercise-count">
+              <option value="1" selected>1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
+          </div>
+          <div id="exercise-input-list"></div>
+          <button id="generate-plan-btn">Generate Plan</button>
+        </div>
+      </div>
+    </div>
+    <div id="main-page">
+      <div id="dropdown">
+        <div id="dropdown-top-section">
+          <div id="menu-btn">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </div>
+          <div id="title">Workout Tracker</div>
+        </div>
+        <div class="dropdown-menu not-visible">
+          <button id="to-current-date-btn">To Current Date</button>
+          <div id="scroll-btn-section">
+            <button id="to-top-btn">To Top</button>
+            <button id="to-btm-btn">To Bottom</button>
+          </div>
+          <button id="reset-plan-btn">Reset Plan</button>
+        </div>
+      </div>
+      <div id="exercises-grid"></div>
+    </div>
+    <div id="reset-plan-confirmation-overlay" class="hide-overlay">
+      <header>Are you sure you want to reset you plan?</header>
+      <div class="button-section">
+        <button id="yes-btn">YES</button>
+        <button id="no-btn">NO</button>
+      </div>
+    </div>
+
+    <script src="scripts/script.js"></script>
+  </body>
+</html>
